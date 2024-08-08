@@ -1,67 +1,113 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-    color: #333;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
+    width: 100%;
+    position: relative;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffdd00, #ffc107);
     text-align: center;
-    padding: 20px;
-    background-color: #ffffffcc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+}
+
+.logo-container.left {
+    left: 20px;
+}
+
+.logo-container.right {
+    right: 20px;
 }
 
 .logo {
-    height: 80px;
-    margin: 0 20px;
+    height: 50px;
 }
 
 h1 {
     font-size: 2.5em;
+    color: #000;
     margin: 0;
 }
 
 .details, .cta {
-    text-align: center;
+    background-color: #333;
     padding: 20px;
-    background-color: #ffffffcc;
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 20px;
     border-radius: 8px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .details p, .cta p {
     font-size: 1.2em;
     line-height: 1.5em;
+    color: #ffdd00;
 }
 
 .cta .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+    background-color: #ffdd00;
+    color: #000;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .cta .btn:hover {
-    background-color: #218838;
+    background-color: #ffc107;
 }
 
 footer {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #222;
     text-align: center;
-    padding: 10px;
-    background-color: #ffffffcc;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    color: #ffdd00;
+}
+
+footer a {
+    color: #ffdd00;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .details p, .cta p {
+        font-size: 1em;
+    }
+
+    .cta .btn {
+        padding: 8px 16px;
+    }
 }
