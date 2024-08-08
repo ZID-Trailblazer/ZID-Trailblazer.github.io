@@ -17,9 +17,9 @@ header {
     position: relative;
     padding: 40px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #ffdd00, #ff8800);
+    background: linear-gradient(135deg, #ff8800, #ffd700);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .logo-container {
@@ -37,7 +37,7 @@ header {
 
 .logo {
     height: 60px;
-    width: auto;
+    width: 60px;
 }
 
 .title-container h1 {
@@ -51,26 +51,47 @@ header {
     font-size: 1.8em;
     margin: 10px 0 0;
     color: #333;
-    text-transform: uppercase;
     background: -webkit-linear-gradient(45deg, #ff8800, #ffd700);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.details, .cta {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    margin: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.details p, .cta p {
+.info-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box h3 {
+    font-size: 1.5em;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.info-box p {
     font-size: 1.2em;
     line-height: 1.5em;
-    color: #ffd700;
+    color: #fff;
+}
+
+.cta .info-box {
+    background-color: #ff8800;
+    color: #000;
 }
 
 .cta .btn {
@@ -93,10 +114,10 @@ header {
 footer {
     width: 100%;
     padding: 20px;
-    background: linear-gradient(135deg, #ffdd00, #ff8800);
+    background: linear-gradient(135deg, #ff8800, #ffd700);
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 footer p {
@@ -113,6 +134,7 @@ footer a {
 @media (max-width: 768px) {
     .logo {
         height: 50px;
+        width: 50px;
     }
 
     .title-container h1 {
@@ -123,11 +145,7 @@ footer a {
         font-size: 1.5em;
     }
 
-    .details p, .cta p {
-        font-size: 1em;
-    }
-
-    .cta .btn {
-        padding: 10px 20px;
+    .info-box {
+        max-width: 100%;
     }
 }
