@@ -2,47 +2,66 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    color: #333;
 }
 
-.container {
+header {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #ffffffcc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    max-width: 200px;
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
+.logo {
+    height: 80px;
+    margin: 0 20px;
+}
+
 h1 {
-    margin: 0;
     font-size: 2.5em;
+    margin: 0;
 }
 
-p {
-    margin: 10px 0;
+.details, .cta {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffffcc;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.details p, .cta p {
     font-size: 1.2em;
+    line-height: 1.5em;
 }
 
-.button {
+.cta .btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #007bff;
+    background-color: #28a745;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.cta .btn:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffffcc;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
