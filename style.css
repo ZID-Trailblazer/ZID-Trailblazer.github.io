@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -16,9 +16,10 @@ header {
     width: 100%;
     position: relative;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #ffdd00, #ffc107);
     text-align: center;
+    background: linear-gradient(135deg, #ffdd00, #ff8800);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
 }
 
 .logo-container {
@@ -35,18 +36,30 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
+    width: auto;
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #000;
+.title-container h1 {
+    font-size: 3em;
     margin: 0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.title-container h2 {
+    font-size: 1.8em;
+    margin: 10px 0 0;
+    color: #333;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(45deg, #ff8800, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .details, .cta {
-    background-color: #333;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
     margin: 20px;
     border-radius: 8px;
     max-width: 800px;
@@ -57,50 +70,57 @@ h1 {
 .details p, .cta p {
     font-size: 1.2em;
     line-height: 1.5em;
-    color: #ffdd00;
+    color: #ffd700;
 }
 
 .cta .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffdd00;
+    padding: 12px 24px;
+    background-color: #ffd700;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta .btn:hover {
-    background-color: #ffc107;
+    background-color: #ff8800;
+    transform: translateY(-2px);
 }
 
 footer {
     width: 100%;
-    padding: 10px 20px;
-    background-color: #222;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffdd00, #ff8800);
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
 }
 
 footer p {
     margin: 0;
-    color: #ffdd00;
+    color: #000;
+    font-size: 1.2em;
 }
 
 footer a {
-    color: #ffdd00;
+    color: #000;
     text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+    .logo {
+        height: 50px;
     }
 
-    .logo {
-        height: 40px;
+    .title-container h1 {
+        font-size: 2.5em;
+    }
+
+    .title-container h2 {
+        font-size: 1.5em;
     }
 
     .details p, .cta p {
@@ -108,6 +128,6 @@ footer a {
     }
 
     .cta .btn {
-        padding: 8px 16px;
+        padding: 10px 20px;
     }
 }
